@@ -1,8 +1,22 @@
 .buttons-container{
     height: 100%;
 }
-.buttons-row{
+.buttons-row-1{
     width: 100%;
-    height: 100%;
+    height: 30%;
+}
+.buttons-row-2{
+    border: 1px white solid;
+    width: 100%;
+    height: 70%;
+
+    margin: auto;
+}
+
+
+@media(max-width: 575.9px){
+    .buttons-row-1{
+        margin: 10px;
+    }
 }
 

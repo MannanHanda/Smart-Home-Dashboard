@@ -12,7 +12,7 @@ class LedButton extends Component{
     }
 
     render(){
-        const buttonText = this.state.isLedOn ? 'TURN LED OFF': 'TURN LED ON'
+        const buttonText = this.state.isLedOn ? 'LED OFF': 'LED ON'
         return <button className='button-element' onClick={this.toggleLedText}>{buttonText}</button>
     }
 }
