@@ -1,55 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 body{
-    margin: 0;
     font-family: "Open Sans", serif;
 }
 
-/*Container*/
+/*container*/
 .main-container{
     height: 100vh;
     background: linear-gradient(135deg, #3a82f7, #6a00f4);
 }
-/*Row*/
+
+/*row*/
 .main-row{
     height: 100%;
 }
 
-/*Seperator*/
+/*seperator*/
 .border-seperator{
     border-right: 4px solid white;
 }
+@media(max-width: 767.9px){
+    .border-seperator{
+        border-right: none;
+        border-bottom: 4px solid white;
+    }
+}
 
-/*Alignment and spacing*/
+
+/*alignment and spacing*/
 .flexbox-center-row{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.flexbox-center-column{
+}.flexbox-center-column{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.padding-x{
+}.padding-x{
     padding:0 2rem;
-}
-.padding-y{
+}.padding-y{
     padding: 1rem 0;
-}
-
-@media(max-width: 767.9px){
+}@media(max-width: 767.9px){
     .column-1{
         height: 40%;
     }
     .column-2{
         height: 60%;
-    }
-
-    .border-seperator{
-        border-right: none;
-        border-bottom: 4px solid white;
     }
 }
 

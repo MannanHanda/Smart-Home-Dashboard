@@ -1,16 +1,6 @@
-import { Component } from "react";
-
-
-class WeatherButton extends Component{
-  
-  render(){
-    const {onClick} = this.props
-    return <button className='button-element' onClick={onClick}>Weather</button>
-  }
-
+const WeatherButton = (props) =>{
+    return (<button className='button-element' onClick={props.onClick}>{props.title}</button>)
 }
-
-
 export default WeatherButton
 
 

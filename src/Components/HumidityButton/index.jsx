@@ -1,2 +1,4 @@
-const HumidityButton = () =>  <button className='button-element'>Humidity</button>
+const HumidityButton = (props) => {
+    return(<button className='button-element' onClick={props.onClick}>{props.title}</button>)
+}
 export default HumidityButton

@@ -1,0 +1,30 @@
+from flask import Flask, jsonify, request
+import RPi.GPIO as GPIO
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)
+
+LED_PIN = 17
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(LED_PIN, GPIO.OUT)
+GPIO.output(LED_PIN, GPIO.LOW)
+
+@app.route('/toggle-led', methods=['POST'])
+def toggle_led():
+    data = request.json()
+    state = data.getState()
+    if state == 'on':
+        GPIO.output(LED_PIN, GPIO.HIGH)
+        return jsonify({"message": "LED is ON"})
+    elif state == 'off':
+        GPIO.output(LED_PIN, GPIO.LOW)
+        return jsonify({"message": "LED is OFF"})
+    else:
+        return jsonify({"message": "Invalid State"}), 400
+    
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+

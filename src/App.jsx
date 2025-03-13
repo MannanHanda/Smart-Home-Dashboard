@@ -5,7 +5,7 @@ import ButtonsContainer from './Components/ButtonsContainer'
 
 const App = () =>{
 
-  const className1 = 'col-lg-4 col-md-4 flexbox-center-row column-1 border-seperator'
+  const className1 = 'col-lg-4 col-md-4 column-1 flexbox-center-row column-1 border-seperator'
   const className2 = 'col-lg-8 col-md-8 column-2'
 
   return(
