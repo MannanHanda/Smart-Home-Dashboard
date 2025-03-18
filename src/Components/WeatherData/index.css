@@ -1,11 +1,21 @@
 .weather-data{
     padding: 2rem;
-    width: 50%;
+    width: 60%;
     background-color: #374965;
     color: aliceblue;
 }
 
+@media(max-width: 768.5px){
+    .weather-data{
+        width: 80%;
+    }
+}
 
+@media(max-width: 576.5px){
+    .weather-data{
+        width: 90%;
+    }
+}
 
 #city{
     font-weight: bold;
